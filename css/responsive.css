@@ -1,0 +1,149 @@
+/* Responsive Styles */
+
+/* Tablet (768px - 1024px) */
+@media screen and (max-width: 1024px) {
+  h1 {
+    font-size: 2.2rem;
+  }
+  
+  h2 {
+    font-size: 1.8rem;
+  }
+  
+  h3 {
+    font-size: 1.3rem;
+  }
+  
+  .hero h2 {
+    font-size: 2.2rem;
+  }
+  
+  .posts-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Mobile (less than 768px) */
+@media screen and (max-width: 768px) {
+  /* Typography adjustments */
+  h1 {
+    font-size: 1.8rem;
+  }
+  
+  h2 {
+    font-size: 1.5rem;
+  }
+  
+  h3 {
+    font-size: 1.2rem;
+  }
+  
+  .hero h2 {
+    font-size: 1.8rem;
+  }
+  
+  /* Navigation adjustments */
+  header .container {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  
+  #main-nav {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 80%;
+    max-width: 300px;
+    height: 100vh;
+    background-color: var(--color-primary);
+    transition: var(--transition-normal);
+    z-index: 1000;
+    padding-top: 60px;
+    box-shadow: -5px 0 15px rgba(0, 0, 0, 0.2);
+  }
+  
+  #main-nav.open {
+    right: 0;
+  }
+  
+  #main-nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  #main-nav a {
+    display: block;
+    padding: var(--space-sm);
+    width: 100%;
+    text-align: center;
+  }
+  
+  #menu-toggle {
+    display: block;
+    position: relative;
+    z-index: 2000;
+  }
+  
+  #menu-toggle.open span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 6px);
+  }
+  
+  #menu-toggle.open span:nth-child(2) {
+    opacity: 0;
+  }
+  
+  #menu-toggle.open span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -6px);
+  }
+  
+  /* Grid adjustments */
+  .posts-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  /* Content adjustments */
+  .content-card {
+    padding: var(--space-md);
+  }
+  
+  /* Layout adjustments */
+  .container {
+    padding: 0 var(--space-sm);
+  }
+  
+  .hero, .intro, .posts-preview {
+    padding: var(--space-lg) 0;
+  }
+  
+  /* Image gallery */
+  .image-gallery {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Small Mobile (less than 480px) */
+@media screen and (max-width: 480px) {
+  h1 {
+    font-size: 1.6rem;
+  }
+  
+  h2 {
+    font-size: 1.3rem;
+  }
+  
+  .hero {
+    padding: var(--space-md) 0;
+  }
+  
+  .hero h2 {
+    font-size: 1.6rem;
+  }
+  
+  .content-card {
+    padding: var(--space-sm);
+  }
+  
+  .post-card-content {
+    padding: var(--space-sm);
+  }
+}
